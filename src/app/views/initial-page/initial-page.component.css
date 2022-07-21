@@ -1,0 +1,232 @@
+*
+{
+    box-sizing: border-box;
+}
+
+/* -----------------BANNER----------------- */
+.home .title{
+    font: 3rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+}
+
+main{
+    background-color: #F1FAEE;
+}
+
+.home{
+    border-radius: 0%;
+    padding: 0;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+}
+
+.info, .infoBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+button{
+    color: white;
+    background-color: #70B5EA;
+    width: 10rem;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    gap: .5rem;
+    background-color: #ebebeb;
+}
+
+.contentProject{
+    padding: 0 2rem;
+    margin: 0;
+}
+
+h1{
+    font-size: 30px ;
+    font-family:fantasy;
+    margin: 0;
+}
+
+p{
+    font-size: 20px;
+    margin: 0;
+}
+
+#infoProject{
+    font-size: 20px;
+    margin: 0;
+
+}
+
+.logo > img{
+    width: 50vw;   
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* -----------------SOBRE-----------------  */
+
+#about{
+    display: flex;
+    justify-content: space-between;
+    height: 101vh;
+    background-color: #fff;
+}
+
+:host /deep/ .mat-tab-group {
+    flex-direction: row;
+    overflow: hidden;
+  }
+  :host /deep/ .mat-tab-header {
+    border-bottom: none;
+    background-color: #90c9f670;;
+    align-items: center;
+  }
+  :host /deep/ .mat-tab-header-pagination {
+    display: none !important;
+  }
+  :host /deep/ .mat-tab-label-active {
+    background-color: #70b5ea;
+  }
+  :host /deep/ .mat-tab-labels {
+    flex-direction: column;
+  }
+  :host /deep/ .mat-ink-bar {
+    height: 100%;
+    display: none;
+    left: 98% !important;
+  }
+  :host /deep/ .mat-tab-body-wrapper {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  :host /deep/ .mat-tab-body-content {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    padding-left: 28vh;
+  }
+
+
+#infoProject{
+    text-align: center;
+}
+
+#features{
+    display: flex;
+}
+#features img{
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.infoNos{
+    width: 70%;
+}
+
+.mat-tab{
+    display: flex;
+    gap: 1rem;
+}
+
+.imgCard{
+    height: 25vh;
+    transition:  .3s;
+}
+
+.imgCard:hover{
+    transition: transform .3s ease;
+    transform: scale(1.1);
+}
+
+.card{
+    text-align: center;
+    border-radius: 0%;
+    margin: 1rem;
+    width: 20vw;
+}
+
+
+
+/* -----------------RESPONSIVE----------------- */
+@media only screen and (max-width: 600px) {
+    body{
+        max-width: 600px;
+    }
+    .home {
+      display: grid;
+      grid-template-areas: "title subtitle" "content";
+    }
+    .logo{
+        display: none;
+    }
+    .content{
+        position: relative;
+        z-index: 1;
+    }
+    #features{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body{
+        max-width: 450px;
+    }
+    .home {
+      display: grid;
+      grid-template-areas: "title subtitle" "content";
+      overflow: hidden;
+    }
+    .logo{
+        display: block;
+    }
+    .logo img{
+        position: absolute;
+        padding-top: -15rem;
+        margin-bottom: 105px;
+        top: -26px;
+        z-index: -9999;
+        right: -17px;
+        opacity: 67%;
+        width: 125vw;
+    }
+    .content{
+        position: relative;
+        z-index: 1;
+    }
+    #features{
+        display: block;
+    }
+    #features img {
+        height: 26%;
+        bottom: 34px;
+    }
+    :host /deep/ .mat-tab-labels {
+        flex-direction: row;
+    }
+    .infoNos{
+        width: 100%;
+    }
+    :host /deep/ .mat-tab-body-content {
+        padding-top: 0vh;
+        padding-left: 2vh;
+        height: 100vh;
+    }
+}

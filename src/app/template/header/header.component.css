@@ -1,0 +1,76 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #70B5EA;
+}
+
+#buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+button{
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 1px solid #46769b;
+    border-radius: 10px 10px 0% 0%;
+}
+
+img{
+    height: 3rem;
+}
+
+#logo{
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    gap: 1rem;
+}
+
+h4, a{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+a{
+    font-style: none;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.headerLogado{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+.funcionalidades{
+    display: flex;
+    gap: 1rem;
+}
+
+.sair{
+    border: none;
+}
+
+@media only screen and (max-width: 450px) {
+    #buttons{
+        display: contents;
+    }
+    .funcionalidades{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    .user{
+        display: none;
+    }
+    .sair{
+        margin-left: 53px;
+    }
+}

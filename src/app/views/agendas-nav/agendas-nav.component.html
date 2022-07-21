@@ -1,0 +1,23 @@
+<article>
+    <h1>
+        Agendas PET
+        <mat-icon>pets</mat-icon>
+    </h1>
+    <section class="navAgenda">
+        <div (click)="adicionarPet()" class="pets" *ngIf="!pets || !pets.pets || pets.pets.length === 0">
+            <div class="mais"></div>
+            <h3> Adicionar PET</h3>
+        </div>
+        <div *ngIf="pets && pets.pets && pets.pets.length > 0" class="agendas">
+            <div (click)="adicionarPet()" class="pets">
+                <div class="mais"></div>
+                <h3> Adicionar PET</h3>
+            </div>
+            <div *ngFor="let pet of pets.pets" (click)="agendaPet(pet)" class="pets">
+                <img src="{{ pet.imagem }}" alt="pet image">
+                <h3>{{ pet.nome }}</h3>
+            </div>
+        </div>
+    </section>
+</article>
+<app-spinner *ngIf="loading"></app-spinner>

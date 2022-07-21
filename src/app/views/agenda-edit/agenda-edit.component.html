@@ -1,0 +1,51 @@
+<article>
+    <h3>
+        Adicionar Agenda Pet
+        <mat-icon>pets</mat-icon>
+    </h3>
+    <form class="formAgenda" [formGroup]="formPet">
+       <img src="{{data.pet.imagem}}" alt="imagem PET" class="imagemPET">
+        <section class="info">
+            <mat-form-field appearance="fill" class="inputImagem">
+                <mat-label>Imagem</mat-label>
+                <input 
+                    matInput 
+                    formControlName="imagem"
+                >
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="inputNome">
+                <mat-label>Nome</mat-label>
+                <input 
+                    matInput
+                    formControlName="nome" 
+                >
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="inputIdade">
+                <mat-label>Idade</mat-label>
+                <input 
+                    matInput 
+                    formControlName="idade"
+                >
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="inputRaca">
+                <mat-label>Raça</mat-label>
+                <input 
+                    matInput 
+                    formControlName="raca"
+                >
+            </mat-form-field>
+            <mat-radio-group class="tipo">
+                <mat-label class="selectType">Selecione qual é o animal: </mat-label>
+                <div class="animal">
+                 <mat-radio-button value="cachorro" (change)="selectAnimal($event.value)">Cachorro</mat-radio-button>
+                 <mat-radio-button value="gato" (change)="selectAnimal($event.value)">Gato</mat-radio-button>
+                </div>
+             </mat-radio-group>
+        </section>
+    </form>
+    <div mat-dialog-actions class="buttons">
+        <button mat-button id="cancel" mat-dialog-close> Cancelar </button>
+        <button mat-button id="create" type="submit" (click)="atualizarAgenda()"> Salvar </button>
+    </div>
+</article>
+<app-spinner *ngIf="loading"></app-spinner>
